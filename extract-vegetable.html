@@ -1,0 +1,35 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-ajax/iron-ajax.html">
+<!--
+@demo
+-->
+<dom-module id="extract-vegetable">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+
+        </style>
+        <iron-ajax auto url="http://localhost:9000/analyze" method="POST" body="text=[[body]]" content-type="application/x-www-form-urlencoded" on-response="handleResponse" verbose="true"></iron-ajax>
+    </template>
+    <script>
+        Polymer({
+            is: 'extract-vegetable',
+            properties: {
+                body: {
+                    type: String
+                },
+                vegetables: {
+                    type: Array,
+                    notify: true
+                }
+            },
+            handleResponse: function(data) {
+                if (data.detail.response.hasOwnProperty("response")) {
+                    this.set('vegetables', data.detail.response.response.entities);
+                }
+            }
+        });
+    </script>
+</dom-module>

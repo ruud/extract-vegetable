@@ -1,6 +1,6 @@
 {
-  "name": "extract-entity",
-  "main": "extract-entity.html",
+  "name": "extract-vegetable",
+  "main": "extract-vegetable.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4.0",
     "iron-ajax": "PolymerElements/iron-ajax#^1.2.0"

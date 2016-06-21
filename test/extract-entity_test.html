@@ -2,28 +2,28 @@
 
 <html>
   <head>
-    <title>extract-entity test</title>
+    <title>extract-vegetable test</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
     <script src="../../web-component-tester/browser.js"></script>
 
-    <link rel="import" href="../extract-entity.html">
+    <link rel="import" href="../extract-vegetable.html">
   </head>
   <body>
 
     <test-fixture id="basic">
       <template>
-        <extract-entity></extract-entity>
+        <extract-vegetable></extract-vegetable>
       </template>
     </test-fixture>
 
     <script>
-      suite('extract-entity', function() {
+      suite('extract-vegetable', function() {
 
         test('instantiating the element works', function() {
           let element = fixture('basic');
-          assert.equal(element.is, 'extract-entity');
+          assert.equal(element.is, 'extract-vegetable');
         });
 
       });

@@ -1,29 +1,31 @@
 <!doctype html>
 <html>
-  <head>
-    <title>extract-entity demo</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <head>
+        <title>extract-vegetable demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+        <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
 
-    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+        <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+        <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
 
-    <link rel="import" href="../extract-entity.html">
+        <link rel="import" href="../extract-vegetable.html">
 
-    <style is="custom-style" include="demo-pages-shared-styles">
-    </style>
-  </head>
-  <body>
+        <style is="custom-style" include="demo-pages-shared-styles"></style>
+    </head>
+    <body>
 
-    <div class="vertical-section-container centered">
-      <h3>Basic extract-entity Demo</h3>
-      <demo-snippet>
-        <template>
-          <extract-entity></extract-entity>
-        </template>
-      </demo-snippet>
-    </div>
+        <div class="vertical-section-container centered">
+            <h3>Basic extract-vegetable Demo</h3>
+            <demo-snippet>
+                <template is="dom-bind">
+                    <extract-vegetable body="Niet alleen wortelen maar ook de tomaten doen het goed vandaag in de moestuin" vegetables="{{entityItems}}"></extract-vegetable>
+                    <template is="dom-repeat" items="{{entityItems}}">
+                        <div>{{item.entityId}}</div>
+                    </template>
+                </template>
+            </demo-snippet>
+        </div>
 
-  </body>
+    </body>
 </html>
